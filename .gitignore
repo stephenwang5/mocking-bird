@@ -1,0 +1,25 @@
+# Linter config
+
+.pylintrc
+
+# IDE files and directories
+
+.idea/
+.vscode/
+.pydevproject
+.project
+
+# Qt Designer Config Files
+topside_qtcreator.*
+
+# Python
+
+# Working files
+
+*.csv
+
+venv/
+
+__pycache__/
+*.py[cod]
+
