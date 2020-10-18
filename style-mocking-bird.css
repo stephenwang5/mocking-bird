@@ -12,6 +12,7 @@ blockquote.twitter-tweet {
     margin: 10px 5px;
     padding: 0 16px 16px 16px;
     max-width: 468px;
+    background-color: rgb(243, 236, 236);
 }
 
 blockquote.twitter-tweet p {
@@ -31,4 +32,8 @@ blockquote.twitter-tweet a:hover,
 blockquote.twitter-tweet a:focus {
     text-decoration: underline;
 }
-  
+
+body {
+    background-image: url("newspaper.jpg");
+
+}
