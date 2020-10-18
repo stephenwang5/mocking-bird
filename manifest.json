@@ -4,7 +4,7 @@
     "description": "Delivers fresh tweet from your selection of sources to your new tab",
     "manifest_version": 2,
 
-    "content_security_policy": "script-src 'self' 'sha256-NbDluRbaqbYMpKCaxSZSnxED47GRvXT/oxeiHOt6aoM=' https://platform.twitter.com; object-src 'self'",
+    "content_security_policy": "script-src 'self' 'sha256-NbDluRbaqbYMpKCaxSZSnxED47GRvXT/oxeiHOt6aoM=' 'sha256-QxmouP/PuhFtzBOU2BXetWY8O2ZWvH2Xq9NyIAvUjUU=' https://platform.twitter.com; object-src 'self'",
 
     "page_action": {
         "default_icon": "mocking-bird-final.png"

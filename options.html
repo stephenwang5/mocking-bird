@@ -16,7 +16,7 @@
     <button id="save">Save</button>
     <script>
         chrome.storage.sync.get(["handles"], result => {
-            document.getElementById("editor").value = result;
+            document.getElementById("editor").value = result.handles;
         })
 
         document.getElementById("save").onclick = () => {
