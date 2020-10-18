@@ -20,7 +20,14 @@
         })
 
         document.getElementById("save").onclick = () => {
-            chrome.storage.sync.set({"handles": document.getElementById("editor").value},
+            let buffer = document.getElementById("editor").value;
+            let trailing_whitespace = 0;
+            while (buffer[buffer.length-trailing_whitespace-1] === "\n" || 
+                buffer[buffer.length-1-trailing_whitespace] === " ") {
+                trailing_whitespace++;
+            }
+            buffer = buffer.substr(0, buffer.length-trailing_whitespace);
+            chrome.storage.sync.set({"handles": buffer},
             () => {alert("file saved")})
         };
         
