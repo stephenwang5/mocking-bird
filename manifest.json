@@ -4,20 +4,15 @@
     "description": "Delivers fresh tweet from your selection of sources to your new tab",
     "manifest_version": 2,
 
-    "content_security_policy": "script-src 'self' https://platform.twitter.com; object-src 'self'",
+    "content_security_policy": "script-src 'self' 'sha256-NbDluRbaqbYMpKCaxSZSnxED47GRvXT/oxeiHOt6aoM=' https://platform.twitter.com; object-src 'self'",
 
     "page_action": {
-        "default_popup": "mocking-bird.html",
-        "default_icon": {
-            "16": "mocking-bird-final.png",
-            "32": "mocking-bird-final.png",
-            "48": "mocking-bird-final.png",
-            "128": "mocking-bird-final.png"
-        }
+        "default_icon": "mocking-bird-final.png"
     },
 
+    "options_page": "options.html",
+
     "permissions": [
-        "activeTab",
         "storage"
     ],
 

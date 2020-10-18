@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mocking-Bird Options</title>
+</head>
+
+<body>
+    <h1>
+        List of Followed Users:
+    </h1>
+    <p>
+        Please enter the users from which the tweets are to be sourced, one per line, using case-sensitive twitter handles
+    </p>
+    <textarea name="user list" id="editor" cols="60" rows="40"></textarea>
+    <button id="save">Save</button>
+    <script>
+        chrome.storage.sync.get(["handles"], result => {
+            document.getElementById("editor").value = result;
+        })
+
+        document.getElementById("save").onclick = () => {
+            chrome.storage.sync.set({"handles": document.getElementById("editor").value},
+            () => {alert("file saved")})
+        };
+        
+    </script>
+</body>
+</html>
